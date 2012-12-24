@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<componentPackage>
+	<component id="AutoCompleteComboBox" class="com.flextras.autoCompleteComboBox.AutoCompleteComboBox"/>
+
+</componentPackage>
+
