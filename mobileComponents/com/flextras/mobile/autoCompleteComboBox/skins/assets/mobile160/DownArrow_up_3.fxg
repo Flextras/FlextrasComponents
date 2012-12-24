@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fc="http://ns.adobe.com/flashcatalyst/2009"  viewHeight= "24" viewWidth= "24">
+	<Library>
+	</Library>
+
+	<Group d:userLabel="up" d:type="layer">
+		<Path winding="evenOdd" data="M 0 12 C 0 5 5 0 12 0 C 19 0 24 5 24 12 C 24 19 19 24 12 24 C 5 24 0 19 0 12 Z " blendMode="normal" alpha="1" d:userLabel="Ellipse">
+			<fill>
+				<LinearGradient x = "12" y = "0" scaleX = "24" rotation = "90">
+					<GradientEntry color="#6c6c6c" ratio="0" alpha="1"/>
+					<GradientEntry color="#cacaca" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#cacaca" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#4a4a4a" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Path winding="evenOdd" data="M 3 12 C 3 7 7 3 12 3 C 18 3 22 7 22 12 C 22 18 18 22 12 22 C 7 22 3 18 3 12 Z " blendMode="normal" alpha="1" d:userLabel="Ellipse">
+			<fill>
+				<LinearGradient x = "12" y = "3" scaleX = "19" rotation = "90">
+					<GradientEntry color="#d2d2d2" ratio="0" alpha="1"/>
+					<GradientEntry color="#828282" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#828282" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#4a4a4a" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Group d:userLabel="Group_2">
+			<Path winding="evenOdd" data="M 6 10 L 18 10 L 12 18 L 6 10 Z " blendMode="normal" alpha="1" d:userLabel="Arrow">
+				<fill>
+					<SolidColor color="#818181"/>
+				</fill>
+				<stroke>
+					<SolidColorStroke color="#818181" weight="1" caps="none"/>
+				</stroke>
+			</Path>
+			<Path winding="evenOdd" data="M 6 9 L 18 9 L 12 17 L 6 9 Z " blendMode="normal" alpha="1" d:userLabel="Arrow">
+				<fill>
+					<SolidColor color="#f5f5f5"/>
+				</fill>
+				<stroke>
+					<SolidColorStroke color="#cccccc" weight="1" caps="none"/>
+				</stroke>
+			</Path>
+		</Group>
+	</Group>
+	<Group d:userLabel="expander" d:type="layer">
+	</Group>
+</Graphic>

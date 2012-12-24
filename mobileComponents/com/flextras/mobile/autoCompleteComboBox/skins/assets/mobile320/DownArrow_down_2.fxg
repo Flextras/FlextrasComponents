@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fc="http://ns.adobe.com/flashcatalyst/2009"  viewHeight= "32" viewWidth= "32">
+	<Library>
+	</Library>
+
+	<Group d:userLabel="down" d:type="layer">
+		<Path winding="evenOdd" data="M 4 0 C 4 0 28 0 28 0 C 30 0 32 2 32 4 C 32 4 32 28 32 28 C 32 30 30 32 28 32 C 28 32 4 32 4 32 C 2 32 0 30 0 28 C 0 28 0 4 0 4 C 0 2 2 0 4 0 Z " blendMode="normal" alpha="1">
+			<fill>
+				<LinearGradient x = "16" y = "0" scaleX = "32" rotation = "90">
+					<GradientEntry color="#cacaca" ratio="0" alpha="1"/>
+					<GradientEntry color="#6c6c6c" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#6c6c6c" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#4a4a4a" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Path winding="evenOdd" data="M 6 3 C 6 3 26 3 26 3 C 28 3 29 4 29 6 C 29 6 29 26 29 26 C 29 28 28 29 26 29 C 26 29 6 29 6 29 C 4 29 3 28 3 26 C 3 26 3 6 3 6 C 3 4 4 3 6 3 Z " blendMode="normal" alpha="1">
+			<fill>
+				<LinearGradient x = "15" y = "3" scaleX = "27" rotation = "90">
+					<GradientEntry color="#828282" ratio="0" alpha="1"/>
+					<GradientEntry color="#d2d2d2" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#d2d2d2" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#4a4a4a" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Group d:userLabel="arrow">
+			<Path winding="evenOdd" data="M 8 13 L 24 13 L 16 24 L 8 13 Z " blendMode="normal" alpha="1" d:userLabel="Arrow">
+				<fill>
+					<SolidColor color="#818181"/>
+				</fill>
+				<stroke>
+					<SolidColorStroke color="#818181" weight="1" caps="none"/>
+				</stroke>
+			</Path>
+			<Path winding="evenOdd" data="M 8 13 L 24 13 L 16 23 L 8 13 Z " blendMode="normal" alpha="1" d:userLabel="Arrow">
+				<fill>
+					<SolidColor color="#d7d7d7"/>
+				</fill>
+				<stroke>
+					<SolidColorStroke color="#cccccc" weight="1" caps="none"/>
+				</stroke>
+			</Path>
+		</Group>
+	</Group>
+	<Group d:userLabel="expander" d:type="layer">
+	</Group>
+</Graphic>

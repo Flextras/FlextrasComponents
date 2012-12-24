@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	ADOBE SYSTEMS INCORPORATED
+	Copyright 2010 Adobe Systems Incorporated
+	All Rights Reserved.
+
+	NOTICE: Adobe permits you to use, modify, and distribute this file
+	in accordance with the terms of the license agreement accompanying it.
+-->
+
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" 
+	scaleGridLeft="10" scaleGridRight="136" scaleGridTop="10" scaleGridBottom="33">
+<!-- viewHeight= "43" viewWidth= "146" 
+-->
+	<!-- Outer Border -->
+	<!-- this is effectively a rectangle -->
+
+	<Path data="M 0 0 H 145 V 42 H 0 V 0 Z"><!--  alpha="1" -->
+		<stroke>
+			<SolidColorStroke color="#646464" weight="1"/><!--  -->
+		</stroke>
+	</Path>
+	
+</Graphic>

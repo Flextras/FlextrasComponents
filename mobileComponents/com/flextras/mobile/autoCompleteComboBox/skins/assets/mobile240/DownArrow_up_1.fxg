@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fc="http://ns.adobe.com/flashcatalyst/2009"  viewHeight= "32" viewWidth= "32">
+	<Library>
+	</Library>
+
+	<Group d:userLabel="up" d:type="layer">
+		<Path winding="evenOdd" data="M 0 16 C 0 7 7 0 16 0 C 25 0 32 7 32 16 C 32 25 25 32 16 32 C 7 32 0 25 0 16 Z " blendMode="normal" alpha="1" d:userLabel="Ellipse">
+			<fill>
+				<LinearGradient x = "16" y = "0" scaleX = "32" rotation = "90">
+					<GradientEntry color="#b9b9b9" ratio="0" alpha="1"/>
+					<GradientEntry color="#eeeeee" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#eeeeee" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#727272" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Path winding="evenOdd" data="M 4 16 C 4 9 9 4 16 4 C 22 4 28 9 28 16 C 28 23 22 28 16 28 C 9 28 4 23 4 16 Z " blendMode="normal" alpha="1" d:userLabel="Ellipse">
+			<fill>
+				<LinearGradient x = "16" y = "4" scaleX = "24" rotation = "90">
+					<GradientEntry color="#eeeeee" ratio="0" alpha="1"/>
+					<GradientEntry color="#d5d5d5" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#d5d5d5" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#cccccc" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Path winding="evenOdd" data="M 16 21 L 10 15 L 11 14 L 16 19 L 16 19 L 21 14 L 22 15 L 16 21 L 16 21 Z " blendMode="normal" alpha="1">
+			<fill>
+				<SolidColor color="#999999"/>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#666666" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+	</Group>
+	<Group d:userLabel="expander" d:type="layer">
+	</Group>
+</Graphic>

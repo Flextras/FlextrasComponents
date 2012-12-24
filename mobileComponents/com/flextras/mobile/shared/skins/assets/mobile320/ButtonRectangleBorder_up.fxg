@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+
+	ADOBE SYSTEMS INCORPORATED
+	Copyright 2010 Adobe Systems Incorporated
+	All Rights Reserved.
+
+	NOTICE: Adobe permits you to use, modify, and distribute this file
+	in accordance with the terms of the license agreement accompanying it.
+
+-->
+
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+	scaleGridLeft="20" scaleGridRight="272" scaleGridTop="20" scaleGridBottom="66">
+	<!-- viewHeight="86" viewWidth="292"  -->
+	<!-- Outer Border -->
+	<!-- this is effectively a rectangle 
+		For some bizarre reason having the two paths works better than one path with a weight of 2
+		Weight of 2 leaves space between border and left and top of button background
+		Weight of 3 would not leave a space; but is a bit thick and inconsistent w/ original Flex Button
+	-->
+	<Path data="M 0 0 H 291 V 85 H 0 V 0 Z" alpha="1" >
+    	<stroke>
+    	  	<SolidColorStroke color="#646464"  weight="1"/>
+    	</stroke>
+  	</Path>
+	<Path data="M 1 1 H 290 V 84 H 1 V 1 Z" alpha="1" >
+    	<stroke>
+    	  	<SolidColorStroke color="#646464"  weight="1"/>
+    	</stroke>
+  	</Path>
+</Graphic>

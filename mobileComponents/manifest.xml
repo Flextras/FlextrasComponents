@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<componentPackage>
+	<component id="DropDownList" class="com.flextras.mobile.dropDownList.DropDownList"/>
+	<component id="AutoCompleteComboBoxMobile" class="com.flextras.mobile.autoCompleteComboBox.AutoCompleteComboBoxMobile"/>
+</componentPackage>
+

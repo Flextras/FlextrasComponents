@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	ADOBE SYSTEMS INCORPORATED
+	Copyright 2010 Adobe Systems Incorporated
+	All Rights Reserved.
+
+	NOTICE: Adobe permits you to use, modify, and distribute this file
+	in accordance with the terms of the license agreement accompanying it.
+
+-->
+
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" 
+	scaleGridLeft="14" scaleGridTop="14" scaleGridRight="206" scaleGridBottom="51">
+	<!-- viewHeight= "65" viewWidth= "220" -->
+	<!-- Border -->
+	<Path data="M 0 0 H 219 V 64 H 0 V 0 Z">
+		<stroke>
+			<SolidColorStroke color="#464646" weight="1"/> 
+		</stroke>
+	</Path>
+	<!-- Fill Shadow -->
+	<!-- making path, basically, one pixel less than border -->
+	<Path data="M 1 1 H 218 V 63 H 1 V 1 Z">
+		<fill>
+			<LinearGradient x = "110" y = "1" scaleX = "63" rotation = "90">
+				<GradientEntry color="#000000" ratio="0" alpha="0.05"/>
+				<GradientEntry color="#000000" ratio="1" alpha="0.25"/>
+			</LinearGradient>
+		</fill>
+	</Path>
+	<!-- Inner Shadow -->
+	<!-- making path, basically, one pixel less than border -->
+	<Path data="M 1 1 H 218 V 63 H 1 V 1 Z">
+		<stroke>
+			<SolidColorStroke color="#000000" alpha="0.25" weight="1"/>
+		</stroke>
+	</Path>
+	<!-- Inner Inner Shadow -->
+	<!-- making path, basically, two pixel less than border -->
+	<Path data="M 2 2 H 217 V 62 H 2 V 2 Z">
+		<stroke>
+			<SolidColorStroke color="#000000" alpha="0.1" weight="1"/>
+		</stroke>
+	</Path>
+</Graphic>

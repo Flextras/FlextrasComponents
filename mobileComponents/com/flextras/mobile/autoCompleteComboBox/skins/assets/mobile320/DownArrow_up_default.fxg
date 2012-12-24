@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fc="http://ns.adobe.com/flashcatalyst/2009"  viewHeight= "32" viewWidth= "32">
+	<Library>
+	</Library>
+
+	<Group d:userLabel="down" d:type="layer">
+		<Group d:userLabel="arrow">
+			<Path winding="evenOdd" data="M 8 13 L 24 13 L 16 24 L 8 13 Z " blendMode="normal" alpha="1" d:userLabel="Arrow">
+		        <fill>
+		            <RadialGradient rotation="90" focalPointRatio="1">   
+		                <!--- 
+		                    @private
+		                    The first part of the arrow's gradient fill. 
+		                    The default alpha is .6. The default color if 0x000000.
+		                -->
+		                <GradientEntry color="#333333" alpha="0.6" />
+		                <!--- 
+		                    @private 
+		                    The second part of the arrow's gradient fill. 
+		                    The default alpha is .6. The default color if 0x000000.
+		                -->
+		                <GradientEntry  color="#666666" alpha="0.8" />
+		            </RadialGradient>
+		        </fill>
+
+<!--
+				<fill>
+					<SolidColor color="#000000" alpha=".6"/> -->
+<!--					<SolidColor color="#d7d7d7"/> -->
+<!--				</fill> -->
+				<stroke>
+				
+					<SolidColorStroke color="#414141" weight="1" caps="none"/>
+<!--					<SolidColorStroke color="#d7d7d7" weight="1" caps="none"/> -->
+<!--					<SolidColorStroke color="#cccccc" weight="1" caps="none"/> -->
+				</stroke>
+			</Path>
+		</Group>
+	</Group>
+</Graphic>

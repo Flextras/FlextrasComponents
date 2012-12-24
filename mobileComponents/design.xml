@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<design>
+	<namespaces>
+		<namespace prefix="flextras" uri="http://www.flextras.com/mxml" />
+	</namespaces>
+	
+	<categories>
+		<category id="Flextras" label="Flextras Mobile Components" defaultExpand="true" />
+	</categories>	
+
+	<components>
+		<component name="DropDownList" namespace="flextras" category="Flextras" displayName="DropDownListMobile">
+		</component>
+		<component name="AutoCompleteComboBoxMobile" namespace="flextras" category="Flextras" displayName="AutoCompleteComboBoxMobile">
+		</component>
+	</components>
+</design>

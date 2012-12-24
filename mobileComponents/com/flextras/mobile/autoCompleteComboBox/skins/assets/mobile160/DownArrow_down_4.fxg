@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:fc="http://ns.adobe.com/flashcatalyst/2009"  viewHeight= "24" viewWidth= "24">
+	<Library>
+	</Library>
+
+	<Group d:userLabel="down" d:type="layer">
+		<Path winding="evenOdd" data="M 0 12 C 0 5 5 0 12 0 C 19 0 24 5 24 12 C 24 19 19 24 12 24 C 5 24 0 19 0 12 Z " blendMode="normal" alpha="1" d:userLabel="Ellipse">
+			<fill>
+				<LinearGradient x = "12" y = "0" scaleX = "24" rotation = "90">
+					<GradientEntry color="#000000" ratio="0" alpha="1"/>
+					<GradientEntry color="#454545" ratio="0.99" alpha="1"/>
+					<GradientEntry color="#454545" ratio="0.99" alpha="1"/>
+				</LinearGradient>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#cccccc" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+		<Path winding="evenOdd" data="M 12 17 L 6 11 L 7 9 L 12 14 L 12 14 L 18 9 L 19 11 L 12 17 L 12 17 Z " blendMode="normal" alpha="1">
+			<fill>
+				<SolidColor color="#666666"/>
+			</fill>
+			<stroke>
+				<SolidColorStroke color="#cccccc" weight="1" caps="none"/>
+			</stroke>
+		</Path>
+	</Group>
+	<Group d:userLabel="expander" d:type="layer">
+	</Group>
+</Graphic>
