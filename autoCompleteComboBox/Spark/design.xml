@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<design>
+	<namespaces>
+		<namespace prefix="flextras" uri="http://www.flextras.com/mxml" />
+	</namespaces>
+	
+	<categories>
+		<category id="Flextras" label="Flextras Components" defaultExpand="true" />
+	</categories>
+
+	<components>
+		<component name="AutoCompleteComboBoxLite" namespace="flextras" category="Flextras" displayName="AutoCompleteComboBoxLite">
+		</component>
+	</components>
+</design>
