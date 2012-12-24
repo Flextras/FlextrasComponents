@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<componentPackage>
+	<component id="Calendar" class="com.flextras.calendar.Calendar"/>
+</componentPackage>
+
