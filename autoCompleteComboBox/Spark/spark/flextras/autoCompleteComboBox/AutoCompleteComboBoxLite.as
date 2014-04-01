@@ -258,6 +258,13 @@ package spark.flextras.autoCompleteComboBox
 			return this._typeAheadText;
 		}
 		
+		// JH DotComIt adding on 4/1/2014
+		// client wanted to be able to set thise value 
+		public function set typeAheadText(value:String):void{
+			setTypeAheadText(value);
+			this.textInput.text = '';
+		}
+		
 		/**
 		 * @private 
 		 * A helper function for setting the type ahead Text value; 
