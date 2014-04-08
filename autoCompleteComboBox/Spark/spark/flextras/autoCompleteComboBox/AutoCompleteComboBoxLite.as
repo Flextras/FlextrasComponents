@@ -26,6 +26,7 @@ package spark.flextras.autoCompleteComboBox
 	import flashx.textLayout.operations.CutOperation;
 	import flashx.textLayout.operations.DeleteTextOperation;
 	import flashx.textLayout.operations.FlowOperation;
+	import flashx.textLayout.operations.InsertTextOperation;
 	
 	import mx.collections.ListCollectionView;
 	import mx.core.ClassFactory;
@@ -231,6 +232,36 @@ package spark.flextras.autoCompleteComboBox
 		public function set filterFunction (value:Function):void{
 			this._filterFunction = value;
 			dispatchEvent(new Event("filterFunctionChanged"));
+		}
+
+		//----------------------------------
+		//  selectOnEnter
+		//----------------------------------
+		/**
+		 * @private
+		 */
+		private var _selectOnEnter : Boolean = false;
+		
+		[Bindable("selectOnEnterChanged")]
+		[Inspectable(category="AutoComplete", defaultValue="false",enumeration="true,false",name="AutoComplete Select on Enter",type="Boolean")]
+		/**
+		 * Use this property if you want to select the first item in the AutoComplete's filtered drop down list when the user 
+		 * presses the enter key.  
+		 * If enter is pressed and nothing is selected, the first item in the first will not be selected unless you set the 
+		 * autoCompleteSelectOnEnterIfEmpty to true.
+		 * 
+		 *  @default false
+		 */
+		public function get selectOnEnter():Boolean{
+			return this._selectOnEnter;
+		}
+		
+		/**
+		 * @private
+		 */
+		public function set selectOnEnter (value:Boolean):void{
+			this._selectOnEnter = value;
+			dispatchEvent(new Event("selectOnEnterChanged"));
 		}
 		
 		//----------------------------------
@@ -472,6 +503,26 @@ package spark.flextras.autoCompleteComboBox
 			{
 				return;
 			}*/
+
+			// JH DotComIt 4/8/2014
+			// if operation is an enter key press; select top item in list
+			// assuming there are items in the list
+			if(this.selectOnEnter){
+				trace(event);
+				if(event.keyCode == Keyboard.ENTER){
+					if(this.dataProvider.length >= 1){
+						// select item
+						// first select the first item in the filtered data provider
+						this.selectedItem = this.dataProvider[0];
+						// then set the type ahead text to an empty string; this will u nfilter the dataProvider
+						this.setTypeAheadText('');
+						// then close the drop down 
+						this.closeDropDown(false);
+						return;
+					}
+				}
+			}
+			
 			super.keyDownHandler(event);
 		}
 		
