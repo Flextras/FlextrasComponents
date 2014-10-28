@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <componentPackage>
 	<component id="AutoCompleteComboBoxLite" class="spark.flextras.autoCompleteComboBox.AutoCompleteComboBoxLite"/>
-
+	<component id="AutoCompleteMultiSelect" class="spark.flextras.autoCompleteMultiSelect.AutoCompleteMultiSelect"/>
 </componentPackage>
 

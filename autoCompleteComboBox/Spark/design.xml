@@ -11,5 +11,7 @@
 	<components>
 		<component name="AutoCompleteComboBoxLite" namespace="flextras" category="Flextras" displayName="AutoCompleteComboBoxLite">
 		</component>
+		<component name="AutoCompleteMultiSelect" namespace="flextras" category="Flextras" displayName="AutoCompleteMultiSelect">
+		</component>
 	</components>
 </design>
