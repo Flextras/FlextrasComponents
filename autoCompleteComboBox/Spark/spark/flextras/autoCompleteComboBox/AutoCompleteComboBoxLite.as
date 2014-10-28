@@ -120,7 +120,9 @@ package spark.flextras.autoCompleteComboBox
 				// can probably accomplish this by moving filtering code under next code block which resets the values 
 				// actually we can't because textInput.text may be wiped out even if selectedIndex didn't change; not sure why 
 				// though, seems to be a side effect of something else that may have occurred.  
-				if((this.textInput.text == '') && (this.typeAheadText != '')){
+				// JH DotComIt 9/30/2014
+				// add check for textInput; as it is an optional skin part 
+				if((this.textInput) && (this.textInput.text == '') && (this.typeAheadText != '')){
 					this.textInput.text = this.typeAheadText;
 				}
 				
@@ -152,11 +154,15 @@ package spark.flextras.autoCompleteComboBox
 			// and then also cause this method to reset the textInput.text to '' instead of 'Alabamaq', and that's bad.
 			if((selectedIndexChanged) ){
 				if (selectedIndex == NO_SELECTION) {
-					if((this.textInput.text != this.typeAheadText) ){
+					// JH DotComIt 9/30/2014
+					// add check for textInput as it is an optional skin part 
+					if((this.textInput) && (this.textInput.text != this.typeAheadText) ){
 						this.textInput.text = this.typeAheadText;
 					}
 					
-				} else if ((selectedIndex >= 0) && (this.textInput.text == '')){
+					// JH DotComIt 9/30/2014
+					// add check for textInput as it is an optional skin part 
+				} else if ((selectedIndex >= 0) && (this.textInput) && (this.textInput.text == '')){
 					// in some sitautions, an item is selected, but the textInput.text is not properly updated
 					// This happens when selecting something w/ arrow keys and clicking enter.  Internally, we use selectedItem
 					// to store that item.  So check should fix that
@@ -293,7 +299,11 @@ package spark.flextras.autoCompleteComboBox
 		// client wanted to be able to set thise value 
 		public function set typeAheadText(value:String):void{
 			setTypeAheadText(value);
-			this.textInput.text = value;
+			// JH DotComIt 9/30/2014
+			// add check for textInput which is an optional skin part 
+			if(this.textInput){
+				this.textInput.text = value;
+			}
 		}
 		
 		/**
@@ -390,7 +400,9 @@ package spark.flextras.autoCompleteComboBox
 				
 				// if textInput.text is empty it is because an item was just selected and we are resetting the 
 				// dataProvider.  Close the drop down if it's open
-				if((this.textInput.text == '') && (this.isDropDownOpen)){
+				// JH DotComIt 9/30/2014
+				// added conditiont o make sure textInput is defined; as that is an optional skin part 
+				if((this.textInput) && (this.textInput.text == '') && (this.isDropDownOpen)){
 					this.closeDropDown(false);
 				}
 				
@@ -433,8 +445,11 @@ package spark.flextras.autoCompleteComboBox
 				return;
 			}
 
-			
-			this.setTypeAheadText(textInput.text);
+			// JH DotComIt 9/30/2014
+			// added conditiont o make sure textInput is defined; as that is an optional skin part 
+			if(textInput){
+				this.setTypeAheadText(textInput.text);
+			}
 			
 			// turns out in the context of the AutoCompleteComboBox
 			// if any text changes we want to open the drop down
@@ -443,7 +458,9 @@ package spark.flextras.autoCompleteComboBox
 				// JH DotComIt 11/25/2011
 				// if someone tabs into the component and deletes all text 
 				// the popup shouldn't open 
-				if(textInput.text == ''){
+				// JH DotComIt 9/30/2014
+				// added conditiont o make sure textInput is defined; as that is an optional skin part 
+				if((textInput) && (textInput.text == '')){
 					// this fixes a bug where the drop down would not close when all text was 
 					// deleted 
 					if( isDropDownOpen ){
@@ -508,7 +525,7 @@ package spark.flextras.autoCompleteComboBox
 			// if operation is an enter key press; select top item in list
 			// assuming there are items in the list
 			if(this.selectOnEnter){
-				trace(event);
+//				trace(event);
 				if(event.keyCode == Keyboard.ENTER){
 					if(this.dataProvider.length >= 1){
 						// select item
