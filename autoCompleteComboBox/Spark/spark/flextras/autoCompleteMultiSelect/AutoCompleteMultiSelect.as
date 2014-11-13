@@ -148,6 +148,13 @@ package spark.flextras.autoCompleteMultiSelect
 		private var _proposedSelectedIndices:Vector.<int> = new Vector.<int>(); 
 
 		
+		/**
+		 * @private  
+		 * used to determine if selectedIndex or selectedIndices are set manually referenced as part of sync up in commitSelection
+		 */
+		protected var selectedIndexorIndicesManualSet :Boolean = false;
+
+		
 		//--------------------------------------------------------------------------
 		//
 		//  Properties
@@ -332,6 +339,28 @@ package spark.flextras.autoCompleteMultiSelect
 			super.dataProvider = value;
 		}
 		
+		
+		/**
+		 * @private 
+		 * Just changing to toggle the selectedIndexOrIndicesManualSet property
+		 */
+		override public function set selectedIndex(value:int):void
+		{
+			selectedIndexorIndicesManualSet = true;
+			super.selectedIndex = value;
+		}
+
+		/**
+		 * @private 
+		 * Just changing to toggle the selectedIndexOrIndicesManualSet property
+		 */
+		override public function set selectedIndices(value:Vector.<int>):void
+		{
+			selectedIndexorIndicesManualSet = true;
+			super.selectedIndices = value;
+		}
+
+		
 		/**
 		 * Overriding this to keep _proposedSelectedIndices in sync with parent 
 		 * copied almost verbatim from List class, but still calling super 
@@ -404,11 +433,17 @@ package spark.flextras.autoCompleteMultiSelect
 			// code still seems to work with this hear, so leaving it 
 			// 10/21/2014 This is needed to sync explicit sets on selectedIndex with selectedIndices; and must be done before calling super 
 			// so moving this before super call whereas previously it was after it 
-			if (selectedIndex > NO_SELECTION)
-			{
-				if (_proposedSelectedIndices && _proposedSelectedIndices.indexOf(selectedIndex) == -1){
-					_proposedSelectedIndices.push(selectedIndex);
+			// 11/13/2014 This causes issues if the last item is being de-selected because the selectedIndex is not reset yet, so still has a value
+			// So that value gets added onto the _proposedSelectedIndices which it shouldn't be 
+			if(selectedIndexorIndicesManualSet){
+				if (selectedIndex > NO_SELECTION)
+				{
+					if (_proposedSelectedIndices && _proposedSelectedIndices.indexOf(selectedIndex) == -1){
+						_proposedSelectedIndices.push(selectedIndex);
+					}
 				}
+				selectedIndexorIndicesManualSet = false;
+				
 			}
 			
 			var retVal:Boolean = super.commitSelection(dispatchChangedEvents); 
